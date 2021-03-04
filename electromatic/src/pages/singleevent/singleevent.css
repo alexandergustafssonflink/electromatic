@@ -1,0 +1,94 @@
+.single-event-card {
+  background-color: white;
+  margin: 15px 15px 0px 15px;
+  padding-bottom: 30px;
+}
+
+.single-event-card .single-event-img {
+  width: 100%;
+}
+
+.single-event-card p {
+  font-size: 14px;
+}
+
+.single-event-card h1 {
+  font-size: 24px;
+  margin: 10px 0px;
+  position: relative;
+}
+
+.single-event-card .primary-btn {
+  background-color: #85dba2;
+  border: solid 1px black;
+  color: black;
+  font-size: 18px;
+  width: 100%;
+  height: 50px;
+  margin-top: 20px;
+  box-shadow: 2px 2px 2px 2px #ccc;
+}
+.secondary-btn {
+  background-color: white;
+  border: solid 1px black;
+}
+
+.bottom-img {
+  width: 80%;
+  position: absolute;
+}
+
+.long-description p {
+  margin-bottom: 14px;
+}
+
+@media only screen and (min-width: 600px) and (max-width: 1000px) {
+  .single-event-card {
+    margin: 0px 50px;
+  }
+
+  #root > div > div > a > button {
+    width: 300px;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  .single-event-img-container {
+    height: 400px;
+  }
+
+  .single-event-img {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .single-event-card h1 {
+    font-size: 50px;
+    margin: 50px 0px 0px 150px;
+  }
+
+  .single-event-card p {
+    margin-bottom: 14px;
+  }
+
+  .long-description {
+    font-size: 14px;
+    margin: 15px 0px 0px 150px;
+    width: 40%;
+  }
+  #root > div > div > a > button {
+    width: 300px;
+    margin-left: 150px;
+  }
+
+  .single-event-card {
+    position: relative;
+    padding-bottom: 50px;
+  }
+
+  .bottom-img {
+    width: 30%;
+    position: absolute;
+    bottom: -30px;
+    right: 0px;
+  }
+}

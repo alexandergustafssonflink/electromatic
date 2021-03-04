@@ -1,0 +1,41 @@
+nav {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 100px 0px 100px;
+  border-bottom: solid black 1px;
+  padding-bottom: 20px;
+}
+
+nav button {
+  width: 200px;
+  height: 60px;
+  border: none;
+  background-color: #4868e6;
+  color: white;
+  font-size: 36px;
+  font-family: "poppins";
+  transition: 0.3s ease;
+}
+
+nav button:hover {
+  background-color: #85dba2;
+}
+
+.powered {
+  font-size: 14px !important;
+  margin: 0px !important;
+  width: 100% !important;
+  text-align: left !important;
+}
+
+.matic {
+  font-size: 24px !important;
+  margin: 0px !important;
+  width: 100% !important;
+  font-family: "poppins" !important;
+  font-weight: 700;
+}
+
+nav div:nth-child(0) {
+  font-size: 12px;
+}

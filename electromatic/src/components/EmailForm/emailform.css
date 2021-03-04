@@ -1,0 +1,55 @@
+.form-div {
+  margin: 0px 15px 0px 15px;
+  background-color: white;
+  height: 70px;
+  /* border: solid 5px black; */
+  position: relative;
+  border-radius: 70px;
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.form-div button {
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 1%;
+  box-shadow: none;
+}
+
+form {
+  height: 50px;
+  width: 100%;
+}
+
+.form-text {
+  border: none;
+  height: 50px;
+  width: 65%;
+  position: absolute;
+  left: 10%;
+  font-size: 18px;
+}
+
+.right-arrow {
+  width: 100%;
+  height: 100%;
+}
+
+@media only screen and (min-width: 600px) and (max-width: 1000px) {
+  .form-div {
+    margin: 50px;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .form-div {
+    max-width: 500px;
+  }
+}
