@@ -18,7 +18,7 @@ html {
 #home p {
   margin: 0px 15px 0px 15px;
   text-align: center;
-  font-family: "Nunito";
+  font-family: "poppins";
   font-size: 18px;
 }
 
@@ -27,7 +27,7 @@ html {
   font-weight: 700;
   font-size: 36px;
   text-align: center;
-  margin: 30px 0px 15px 0px;
+  /* margin: 30px 0px 15px 0px; */
 }
 #home .bottom-img {
   width: 80%;
@@ -68,6 +68,7 @@ html {
 #about {
   height: 100vh;
   position: relative;
+  overflow: hidden;
 }
 
 #about h1 {
@@ -83,10 +84,6 @@ html {
   width: 100%;
   position: absolute;
   bottom: 0vh;
-}
-
-.event-list {
-  opacity: 0;
 }
 
 #connect {
@@ -105,7 +102,7 @@ html {
 }
 
 .connect-text {
-  font-family: "Nunito";
+  font-family: "poppins";
   font-size: 24px;
   margin: 30px 15px 0px 15px;
   color: white;
@@ -126,9 +123,12 @@ p {
   opacity: 0;
 } */
 
+.shadow {
+  box-shadow: gray 0px 4px 4px 0px;
+}
+
 button {
   font-family: "Roboto";
-  box-shadow: gray 0px 4px 4px 0px;
 }
 
 h1 {
@@ -189,7 +189,7 @@ h3 {
 
   #home h1 {
     font-size: 50px;
-    margin-top: 6%;
+    padding-top: 15%;
   }
 
   #home p {
@@ -209,6 +209,8 @@ h3 {
 
   .all-events-btn {
     width: 300px;
+    background-color: #f9d15b;
+    color: black;
   }
 
   .about-lower-img {

@@ -1,4 +1,4 @@
-nav {
+.nav-menu {
   display: flex;
   justify-content: space-around;
   margin: 20px 100px 0px 100px;
@@ -6,7 +6,7 @@ nav {
   padding-bottom: 20px;
 }
 
-nav button {
+.nav-menu button {
   width: 200px;
   height: 60px;
   border: none;
@@ -17,7 +17,7 @@ nav button {
   transition: 0.3s ease;
 }
 
-nav button:hover {
+.nav-menu button:hover {
   background-color: #85dba2;
 }
 
@@ -36,6 +36,6 @@ nav button:hover {
   font-weight: 700;
 }
 
-nav div:nth-child(0) {
+.nav-menu div:nth-child(0) {
   font-size: 12px;
 }

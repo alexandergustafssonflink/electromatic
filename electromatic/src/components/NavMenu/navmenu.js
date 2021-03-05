@@ -4,17 +4,17 @@ import "./navmenu.css";
 const NavMenu = () => {
   return (
     <nav className="nav-menu">
-      <a href="#home">
+      <a href="/#home">
         {" "}
         <button>home</button>
       </a>
-      <a href="#events">
+      <a href="/#events">
         <button>events</button>
       </a>
-      <a href="#about">
+      <a href="/#about">
         <button>about</button>
       </a>
-      <a href="#connect">
+      <a href="/#connect">
         <button>connect</button>
       </a>
       <div className="logo-div">

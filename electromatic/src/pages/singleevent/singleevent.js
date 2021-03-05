@@ -4,7 +4,7 @@ import client from "../../contentful.js";
 import React from "react";
 import "./singleevent.css";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
-// import NavMenu from "./../../components/NavMenu/navmenu.js";
+import BurgerMenu from "./../../components/BurgerMenu/burgermenu.js";
 
 function SingleEvent(props) {
   const [event, setEvent] = React.useState(null);
@@ -23,6 +23,7 @@ function SingleEvent(props) {
 
   return (
     <>
+      <BurgerMenu />
       <div className="single-event-card">
         <div className="single-event-img-container">
           <img
@@ -39,12 +40,12 @@ function SingleEvent(props) {
         <a href={event && event.fields.eventLink}>
           <button className="primary-btn">Watch now </button>
         </a>
+        <img
+          className="bottom-img"
+          src="../frontpage-bottom.png"
+          alt="bottom-img"
+        />
       </div>
-      <img
-        className="bottom-img"
-        src="../frontpage-bottom.png"
-        alt="bottom-img"
-      />
     </>
   );
 }

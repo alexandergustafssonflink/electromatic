@@ -46,7 +46,7 @@
 .primary-btn {
   background-color: #3d5177;
   color: white;
-  border: none;
+  border: 1px solid #3d5177;
 }
 .secondary-btn {
   background-color: white;

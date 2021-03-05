@@ -1,6 +1,6 @@
 .all-events {
   background-color: #3d5177;
-  margin: -30px 0px -30px 0px;
+  /* margin: -30px 0px -30px 0px; */
   padding: 30px 0px 60px 0px;
 }
 
@@ -34,6 +34,7 @@
   }
 
   .all-events h1 {
-    margin: 100px 0px 0px 150px;
+    margin: 50px 0px 50px 160px;
+    font-size: 50px;
   }
 }

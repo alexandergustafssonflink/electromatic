@@ -1,5 +1,6 @@
 import "./App.css";
-import NavMenu from "./components/NavMenu/navmenu.js";
+// import NavMenu from "./components/NavMenu/navmenu.js";
+import BurgerMenu from "./components/BurgerMenu/burgermenu.js";
 import EventCard from "./components/EventCard/eventcard.js";
 import EmailForm from "./components/EmailForm/emailform.js";
 import Layout from "./components/Layout/layout.js";
@@ -20,9 +21,16 @@ function Home() {
       }, []);
   });
 
+  const homeSectionRef = useRef(null);
   const aboutSectionRef = useRef(null);
   const eventsSectionRef = useRef(null);
   const connectSectionRef = useRef(null);
+
+  const homeIntersection = useIntersection(homeSectionRef, {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.8,
+  });
 
   const aboutTextIntersection = useIntersection(aboutSectionRef, {
     root: null,
@@ -33,7 +41,7 @@ function Home() {
   const eventsIntersection = useIntersection(eventsSectionRef, {
     root: null,
     rootMargin: "0px",
-    threshold: 0.5,
+    threshold: 0.3,
   });
 
   const connectIntersection = useIntersection(connectSectionRef, {
@@ -43,22 +51,22 @@ function Home() {
   });
 
   const fadeIn = (element) => {
-    gsap.to(element, 5, {
+    gsap.to(element, {
       opacity: 1,
       y: 0,
-      duration: 2.5,
+      duration: 1,
       ease: "power4.out",
     });
   };
 
-  const fadeIn2 = (element) => {
-    gsap.to(element, 5, {
-      opacity: 1,
-      y: 0,
-      duration: 7.5,
-      ease: "power4.out",
-    });
-  };
+  // const fadeIn2 = (element) => {
+  //   gsap.to(element, 5, {
+  //     opacity: 1,
+  //     y: 0,
+  //     duration: 7.5,
+  //     ease: "power4.out",
+  //   });
+  // };
 
   const fadeInFromRight = (element) => {
     gsap.to(element, {
@@ -78,12 +86,23 @@ function Home() {
     });
   };
   const fadeOut = (element) => {
-    gsap.to(element, 1, {
+    gsap.to(element, {
       opacity: 0,
       y: 50,
+      duration: 1,
       ease: "power4.out",
     });
   };
+
+  if (homeIntersection) {
+    if (homeIntersection.isIntersecting) {
+      fadeIn(".front-quote");
+      fadeIn(".author-name");
+    } else {
+      fadeOut(".front-quote");
+      fadeOut(".author-name");
+    }
+  }
 
   if (aboutTextIntersection) {
     if (aboutTextIntersection.isIntersecting) {
@@ -114,11 +133,11 @@ function Home() {
   return (
     <>
       <Layout />
-      <section id="home">
-        <NavMenu />
+      <BurgerMenu />
+      <section id="home" ref={homeSectionRef}>
         <img className="top-img" src="desktop-top.webp" alt="top-img" />
         <h1>Electromatic</h1>
-        <p>
+        <p className="front-quote">
           Electric power is ever present in unlimited quantaties and can drive
           the worlds machinery without the need of coal, oil, gas or any of
           common fuels{" "}
@@ -130,7 +149,6 @@ function Home() {
           alt="bottom-img"
         />
       </section>
-
       <section id="events" ref={eventsSectionRef}>
         <h1>Latest events</h1>
         <div className="event-list">
@@ -145,7 +163,6 @@ function Home() {
           </a>
         </div>
       </section>
-
       <section id="about" ref={aboutSectionRef}>
         <h1>About</h1>
         <p className="fadeIn">
@@ -166,7 +183,6 @@ function Home() {
           alt="about-lower-img"
         />
       </section>
-
       <section id="connect" ref={connectSectionRef}>
         <h1>Connect</h1>
         <p className="connect-text">
