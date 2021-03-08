@@ -8,7 +8,6 @@ import { Router } from "@reach/router";
 import Home from "./home.js";
 import Events from "./pages/events/events.js";
 import SingleEvent from "./pages/singleevent/singleevent.js";
-import "./resources/aos.js";
 
 function App() {
   return (
