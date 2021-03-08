@@ -37,13 +37,21 @@
   border: solid 1px black;
 }
 
-.bottom-img {
-  width: 80%;
-  position: absolute;
-}
-
 .long-description p {
   margin-bottom: 14px;
+}
+
+.single-event-lower-section {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.bottom-img {
+  width: 120%;
+  right: 0%;
+  position: absolute;
+
+  transform: rotate(180deg);
 }
 
 @media only screen and (min-width: 600px) and (max-width: 1000px) {
@@ -84,15 +92,20 @@
     margin-left: 150px;
   }
 
+  .single-event-lower-section {
+    width: 300px;
+    margin-left: 150px;
+  }
+
   .single-event-card {
     position: relative;
     padding-bottom: 50px;
   }
 
   .bottom-img {
-    width: 30%;
+    width: 100%;
     position: absolute;
-    bottom: -30px;
+    bottom: -60px;
     right: 0px;
   }
 }

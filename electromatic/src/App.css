@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -9,6 +12,7 @@ html {
 #home {
   height: 100vh;
   position: relative;
+  overflow: hidden;
 }
 
 #home .top-img {
@@ -30,9 +34,11 @@ html {
   /* margin: 30px 0px 15px 0px; */
 }
 #home .bottom-img {
-  width: 80%;
+  width: 170%;
   position: absolute;
-  bottom: 0vh;
+  bottom: 0%;
+  right: 0%;
+  transform: rotate(180deg);
 }
 
 #home .author-name {
@@ -44,6 +50,7 @@ html {
 #events {
   background-color: #3d5177;
   padding-bottom: 50px;
+  overflow: hidden;
 }
 
 #events h1 {
@@ -63,6 +70,8 @@ html {
   width: 100%;
   height: 50px;
   font-size: 18px;
+  background-color: #f9d15b;
+  color: black;
 }
 
 #about {
@@ -90,6 +99,7 @@ html {
   background-color: #3d5177;
   height: 100vh;
   position: relative;
+  overflow: hidden;
 }
 
 #connect h1 {
@@ -112,6 +122,7 @@ html {
   position: absolute;
   bottom: 0px;
   right: 0px;
+  width: 100%;
 }
 
 p {
@@ -141,6 +152,12 @@ h3 {
 
 .nav-menu {
   display: none;
+}
+
+@media only screen and (max-width: 600px) {
+  .events-bottom {
+    margin: 50px 15px 0px 15px;
+  }
 }
 
 @media only screen and (min-width: 600px) and (max-width: 1000px) {
@@ -177,6 +194,9 @@ h3 {
 }
 
 @media only screen and (min-width: 1000px) {
+  .bm-burger-button {
+    display: none;
+  }
   .nav-menu {
     display: flex;
   }
@@ -184,7 +204,10 @@ h3 {
     display: none;
   }
   #home .bottom-img {
-    width: 30%;
+    width: 100%;
+    position: absolute;
+    bottom: 0vh;
+    transform: rotate(180deg);
   }
 
   #home h1 {
@@ -252,5 +275,14 @@ h3 {
   .connect-img {
     right: 200px;
     width: 500px;
+  }
+}
+
+@media only screen and (min-width: 1500px) {
+  #events h1 {
+    padding-top: 5%;
+  }
+  .all-events-btn {
+    margin-top: 20%;
   }
 }

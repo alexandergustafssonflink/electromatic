@@ -3,7 +3,7 @@ import "./eventcard.css";
 
 const EventCard = ({ props }) => {
   return (
-    <div className="event-card">
+    <div className="event-card" data-aos="fade-up">
       <div className="event-img-container">
         <img
           className="event-img"

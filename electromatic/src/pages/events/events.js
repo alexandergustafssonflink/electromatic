@@ -1,6 +1,7 @@
 import EventCard from "./../../components/EventCard/eventcard.js";
 import BurgerMenu from "./../../components/BurgerMenu/burgermenu.js";
-import Layout from "./../../components/Layout/layout.js";
+import NavMenu from "./../../components/NavMenu/navmenu.js";
+// import Layout from "./../../components/Layout/layout.js";
 import client from "../../contentful.js";
 import React from "react";
 import "./events.css";
@@ -19,7 +20,7 @@ function Events() {
 
   return (
     <>
-      <Layout />
+      <NavMenu />
       <BurgerMenu />
       <div className="all-events">
         <h1>All events</h1>

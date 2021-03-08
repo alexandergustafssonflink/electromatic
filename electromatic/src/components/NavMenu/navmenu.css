@@ -1,14 +1,15 @@
 .nav-menu {
   display: flex;
   justify-content: space-around;
-  margin: 20px 100px 0px 100px;
   border-bottom: solid black 1px;
-  padding-bottom: 20px;
+  padding: 20px 0px 20px 0px;
+  position: fixed;
+  width: 100%;
+  background-color: #4868e6;
+  z-index: 5000;
 }
 
 .nav-menu button {
-  width: 200px;
-  height: 60px;
   border: none;
   background-color: #4868e6;
   color: white;
@@ -18,7 +19,7 @@
 }
 
 .nav-menu button:hover {
-  background-color: #85dba2;
+  color: #fd88a1;
 }
 
 .powered {
@@ -38,4 +39,10 @@
 
 .nav-menu div:nth-child(0) {
   font-size: 12px;
+}
+
+@media only screen and (max-width: 1000px) {
+  .nav-menu {
+    display: none;
+  }
 }

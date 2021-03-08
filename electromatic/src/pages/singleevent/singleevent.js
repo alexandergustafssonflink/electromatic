@@ -5,6 +5,7 @@ import React from "react";
 import "./singleevent.css";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import BurgerMenu from "./../../components/BurgerMenu/burgermenu.js";
+import NavMenu from "./../../components/NavMenu/navmenu.js";
 
 function SingleEvent(props) {
   const [event, setEvent] = React.useState(null);
@@ -23,6 +24,7 @@ function SingleEvent(props) {
 
   return (
     <>
+      <NavMenu />
       <BurgerMenu />
       <div className="single-event-card">
         <div className="single-event-img-container">
@@ -36,13 +38,15 @@ function SingleEvent(props) {
         <div className="long-description">
           {event && documentToReactComponents(event.fields.longDescription)}
         </div>
-
-        <a href={event && event.fields.eventLink}>
-          <button className="primary-btn">Watch now </button>
-        </a>
+        <div class="single-event-lower-section">
+          <a href={event && event.fields.eventLink}>
+            <button className="primary-btn">Watch now </button>
+          </a>
+        </div>
         <img
           className="bottom-img"
-          src="../frontpage-bottom.png"
+          // src="../frontpage-bottom.png"
+          src="../Triangles.svg"
           alt="bottom-img"
         />
       </div>
