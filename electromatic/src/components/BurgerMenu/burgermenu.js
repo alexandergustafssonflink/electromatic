@@ -1,4 +1,4 @@
-import { slide as Menu } from "react-burger-menu";
+import { stack as Menu } from "react-burger-menu";
 import "./burgermenu.css";
 import { Link } from "@reach/router";
 
@@ -12,16 +12,17 @@ const BurgerMenu = () => {
   return (
     <Menu right>
       <a href="/#home">
-        <h3>Home</h3>
+        <button>Home</button>
       </a>
+
       <a href="/#about">
-        <h3>About</h3>
+        <button>About</button>
       </a>
       <a href="/#events">
-        <h3>Events</h3>
+        <button>Events</button>
       </a>
       <a href="/#connect">
-        <h3>Connect</h3>
+        <button>Connect</button>
       </a>
     </Menu>
 

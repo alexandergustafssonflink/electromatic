@@ -55,12 +55,15 @@
 
 /* Wrapper for item list */
 .bm-item-list {
-  color: #b8b7ad;
   padding: 0.8em;
   display: flex;
   flex-direction: column;
 }
 
+.bm-item-list button {
+  border: none;
+  background-color: inherit;
+}
 .bm-item-list h3:hover {
   color: #fd88a1;
 }
@@ -75,8 +78,12 @@
   color: whitesmoke;
 }
 
-.bm-item-list h3 {
-  padding: 10px;
+.bm-item-list button {
+  padding: 18px;
+  color: whitesmoke;
+  font-size: 24px;
+  font-family: "poppins";
+  font-weight: 700;
 }
 
 .nav-item-list {
