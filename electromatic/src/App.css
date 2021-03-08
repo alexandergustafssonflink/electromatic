@@ -70,8 +70,9 @@ html {
   width: 100%;
   height: 50px;
   font-size: 18px;
-  background-color: #f9d15b;
+  background-color: whitesmoke;
   color: black;
+  border: solid 1px black;
 }
 
 #about {
@@ -121,8 +122,8 @@ html {
 .connect-img {
   position: absolute;
   bottom: 0px;
-  right: 0px;
-  width: 100%;
+  right: -3%;
+  width: 90%;
 }
 
 p {
@@ -232,7 +233,7 @@ h3 {
 
   .all-events-btn {
     width: 300px;
-    background-color: #f9d15b;
+    background-color: whitesmoke;
     color: black;
   }
 
