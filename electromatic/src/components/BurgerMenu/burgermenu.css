@@ -59,6 +59,7 @@
   padding: 0.8em;
   display: flex;
   flex-direction: column;
+  margin-top: 30px;
 }
 
 .bm-item-list h3:hover {

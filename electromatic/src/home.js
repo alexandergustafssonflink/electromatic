@@ -173,10 +173,10 @@ function Home() {
           the worlds machinery without the need of coal, oil, gas or any of
           common fuels{" "}
         </p>
-        <p className="author-name" data-aos="fade-left">
+        {/* <p className="author-name" data-aos="fade-left">
           {" "}
           -Nicola Tesla{" "}
-        </p>
+        </p> */}
         <img
           className="bottom-img"
           // src="frontpage-bottom.png"
