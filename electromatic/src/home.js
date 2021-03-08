@@ -178,7 +178,7 @@ function Home() {
         <img
           className="bottom-img"
           // src="frontpage-bottom.png"
-          src="triangles.svg"
+          src="Triangles.svg"
           alt="bottom-img"
         />
       </section>
