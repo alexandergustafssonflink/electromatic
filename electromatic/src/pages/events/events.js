@@ -5,6 +5,7 @@ import NavMenu from "./../../components/NavMenu/navmenu.js";
 import client from "../../contentful.js";
 import React from "react";
 import "./events.css";
+import AOS from "aos";
 
 function Events() {
   const [events, setEvents] = React.useState(null);
@@ -18,6 +19,10 @@ function Events() {
       }, []);
   });
 
+  React.useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
   return (
     <>
       <NavMenu />
@@ -26,8 +31,8 @@ function Events() {
         <h1>All events</h1>
         <div className="events-full-list">
           {events &&
-            events.map((e) => {
-              return <EventCard props={e} />;
+            events.map((e, i) => {
+              return <EventCard props={e} key={i} />;
             })}
         </div>
       </div>

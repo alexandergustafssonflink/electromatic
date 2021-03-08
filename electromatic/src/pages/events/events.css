@@ -7,6 +7,7 @@
 .all-events h1 {
   color: white;
   margin-left: 15px;
+  margin-bottom: 15px;
 }
 
 @media only screen and (min-width: 600px) and (max-width: 1000px) {

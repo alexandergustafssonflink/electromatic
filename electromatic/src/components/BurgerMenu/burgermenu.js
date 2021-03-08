@@ -11,18 +11,11 @@ const BurgerMenu = () => {
   // NOTE: You also need to provide styles, see https://github.com/negomi/react-burger-menu#styling
   return (
     <Menu right>
-      <a href="/#home">
+      <a href="/">
         <button>Home</button>
       </a>
-
-      <a href="/#about">
-        <button>About</button>
-      </a>
-      <a href="/#events">
+      <a href="/events">
         <button>Events</button>
-      </a>
-      <a href="/#connect">
-        <button>Connect</button>
       </a>
     </Menu>
 
