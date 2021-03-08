@@ -1,4 +1,4 @@
-import { stack as Menu } from "react-burger-menu";
+import { slide as Menu } from "react-burger-menu";
 import "./burgermenu.css";
 import { Link } from "@reach/router";
 
