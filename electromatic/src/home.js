@@ -3,7 +3,7 @@ import NavMenu from "./components/NavMenu/navmenu.js";
 import BurgerMenu from "./components/BurgerMenu/burgermenu.js";
 import EventCard from "./components/EventCard/eventcard.js";
 import EmailForm from "./components/EmailForm/emailform.js";
-import React, { useRef } from "react";
+import React, { useRef, useEffect } from "react";
 import client from "./contentful.js";
 import { useIntersection } from "react-use";
 import gsap from "gsap";
@@ -22,39 +22,36 @@ function Home() {
       }, []);
   });
 
-  const homeSectionRef = useRef(null);
-  const aboutSectionRef = useRef(null);
-  const eventsSectionRef = useRef(null);
-  const connectSectionRef = useRef(null);
+  // const homeSectionRef = useRef(null);
+  // const aboutSectionRef = useRef(null);
+  // const eventsSectionRef = useRef(null);
+  // const connectSectionRef = useRef(null);
 
-  const homeIntersection = useIntersection(homeSectionRef, {
-    root: null,
-    rootMargin: "0px",
-    threshold: 0.8,
-  });
+  // const homeIntersection = useIntersection(homeSectionRef, {
+  //   root: null,
+  //   rootMargin: "0px",
+  //   threshold: 0.8,
+  // });
 
-  const aboutTextIntersection = useIntersection(aboutSectionRef, {
-    root: null,
-    rootMargin: "0px",
-    threshold: 0.5,
-  });
+  // const aboutTextIntersection = useIntersection(aboutSectionRef, {
+  //   root: null,
+  //   rootMargin: "0px",
+  //   threshold: 0.5,
+  // });
 
-  const eventsIntersection = useIntersection(eventsSectionRef, {
-    root: null,
-    rootMargin: "0px",
-    threshold: 0.3,
-  });
+  // const eventsIntersection = useIntersection(eventsSectionRef, {
+  //   root: null,
+  //   rootMargin: "0px",
+  //   threshold: 0.3,
+  // });
 
-  const connectIntersection = useIntersection(connectSectionRef, {
-    root: null,
-    rootMargin: "0px",
-    threshold: 0.8,
-  });
+  // const connectIntersection = useIntersection(connectSectionRef, {
+  //   root: null,
+  //   rootMargin: "0px",
+  //   threshold: 0.8,
+  // });
 
-  // ..
-  AOS.init();
-
-  AOS.init();
+  // AOS.init();
 
   // You can also pass an optional settings object
   // below listed default settings
@@ -78,6 +75,11 @@ function Home() {
     mirror: false, // whether elements should animate out while scrolling past them
     anchorPlacement: "top-bottom", // defines which position of the element regarding to window should trigger the animation
   });
+
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
 
   // const fadeIn = (element) => {
   //   gsap.to(element, {
@@ -163,7 +165,7 @@ function Home() {
     <>
       <NavMenu />
       <BurgerMenu />
-      <section id="home" ref={homeSectionRef}>
+      <section id="home">
         <img className="top-img" src="Triangles.svg" alt="top-img" />
         <h1>Electromatic</h1>
         <p className="front-quote" data-aos="fade-up">
@@ -182,7 +184,7 @@ function Home() {
           alt="bottom-img"
         />
       </section>
-      <section id="events" ref={eventsSectionRef}>
+      <section id="events">
         <h1>Latest events</h1>
         <div className="event-list">
           {events &&
@@ -196,7 +198,7 @@ function Home() {
           </a>
         </div>
       </section>
-      <section id="about" ref={aboutSectionRef}>
+      <section id="about">
         <h1>About</h1>
         <p className="fadeIn" data-aos="fade-in">
           Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -216,7 +218,7 @@ function Home() {
           data-aos="fade-left"
         />
       </section>
-      <section id="connect" ref={connectSectionRef}>
+      <section id="connect">
         <h1>Connect</h1>
         <p className="connect-text" data-aos="fade-right">
           {" "}
